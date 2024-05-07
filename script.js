@@ -1,4 +1,8 @@
-import { drawOrigin, drawDestination, drawRoute } from "./utils/helpers.js";
+import {
+  drawOrigin,
+  drawDestination,
+  drawQuadraticBezierRoute,
+} from "./utils/helpers.js";
 
 const canvas = document.getElementById("canvas");
 /** @type {CanvasRenderingContext2D} */
@@ -14,7 +18,7 @@ let countries = {
 
 drawOrigin(ctx, countries.brazil.x, countries.brazil.y);
 drawDestination(ctx, countries.iran.x, countries.iran.y);
-drawRoute(
+drawQuadraticBezierRoute(
   ctx,
   countries.brazil.x,
   countries.brazil.y,
