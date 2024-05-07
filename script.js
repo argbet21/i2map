@@ -6,6 +6,18 @@ const ctx = canvas.getContext("2d");
 
 ctx.drawImage(document.getElementById("source"), 0, 0);
 
-drawOrigin(ctx, 100, 75);
-drawDestination(ctx, 200, 150);
-drawRoute(ctx, 100, 75, 200, 150);
+// Countries list
+let countries = {
+  brazil: { x: 350, y: 360 },
+  iran: { x: 645, y: 210 },
+};
+
+drawOrigin(ctx, countries.brazil.x, countries.brazil.y);
+drawDestination(ctx, countries.iran.x, countries.iran.y);
+drawRoute(
+  ctx,
+  countries.brazil.x,
+  countries.brazil.y,
+  countries.iran.x,
+  countries.iran.y
+);
